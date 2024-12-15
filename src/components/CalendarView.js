@@ -86,7 +86,11 @@ const CalendarView = ({ selectedDate, onSelectDay }) => {
                     day={day}
                     isSelected={day?.date?.toDateString() === selectedDate.toDateString()}
                     onClick={() => openModal(day.date)}
-                    className="w-12 h-12 text-center cursor-pointer rounded-md hover:bg-gray-200"
+                    className={`w-12 h-12 text-center cursor-pointer rounded-md 
+                      bg-black-8000 text-white hover:bg-blue-100 
+                      ${day?.date?.toDateString() === selectedDate.toDateString() 
+                        ? 'bg-blue-500 text-white' 
+                        : ''}`}
                   />
                 ) : (
                   <div className="day-cell empty w-12 h-12" key={idx}></div>
