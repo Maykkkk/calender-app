@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Container Styles */
+.calendar-container {
+  max-width: 700px;
+  margin: auto;
+}
+
+.controls {
+  text-align: center;
+  margin: 10px 0;
+}
+
+/* Calendar Grid */
+.calendar-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.weekdays, .week-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.weekday-header {
+  flex: 1;
+  text-align: center;
+  padding: 5px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: #f8f9fa;
+}
+
+/* Day Cells */
+.day-cell {
+  flex: 1;
+  text-align: center;
+  padding: 8px;
+  margin: 2px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.day-cell.empty {
+  background-color: #f0f0f0;
+  height: 30px;
+}
+
+.day-cell:hover {
+  background-color: #f0f0f0;
+}
+
+/* Special Day Styles */
+.today {
+  background-color: #ffcccb;
+  border: 2px solid #ff0000;
+}
+
+.selected {
+  background-color: #4caf50;
+  color: white;
+  border: 2px solid #2e7d32;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  width: 400px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
